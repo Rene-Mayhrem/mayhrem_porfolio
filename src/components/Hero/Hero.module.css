@@ -96,5 +96,12 @@
 }
 
 @media screen and (max-width: 830px) {
-  .c
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    align-items: center;
+  }
+
 }
