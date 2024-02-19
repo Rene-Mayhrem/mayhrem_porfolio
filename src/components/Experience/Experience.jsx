@@ -20,7 +20,24 @@ const Experience = () => {
             );
           })}
         </div>
-        <ul className=""></ul>
+        <ul className="">
+          {
+            history.map((historyItem, id) => {
+              return <li key={id}>
+                <img src={getImageUrl(historyItem.imageSrc)} alt={historyItem.organization} />
+                <div>
+                  <h3>{`${historyItem.role}`}, ${historyItem.organization}</h3>
+                  <p>{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
+                  <ul>
+                    {historyItem.experiences.map((experience, id) => {
+                      return <li key={id}>{experience}</li>
+                    })}
+                  </ul>
+                </div>
+              </li>
+            })
+          }
+        </ul>
       </div>
     </section>
   );
