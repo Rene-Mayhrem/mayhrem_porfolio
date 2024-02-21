@@ -3,13 +3,14 @@ import React from "react";
 import skills from "../../data/skills.json";
 import history from "../../data/history.json";
 import { getImageUrl } from "../../utils";
+import styles from './Experience.module.css'
 
 const Experience = () => {
   return (
-    <section className="" id="experience">
-      <h2>Experience</h2>
-      <div className="">
-        <div className="">
+    <section className={styles.container} id="experience">
+      <h2 className={styles.title}>Experience</h2>
+      <div className={styles.container}>
+        <div className={styles.content}>
           {skills.map((skill, id) => {
             return (
               <div key={id}>
